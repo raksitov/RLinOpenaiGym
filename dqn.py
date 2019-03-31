@@ -184,18 +184,18 @@ class Agent:
     self.num_actions = num_actions
     self.states = []
     tf.reset_default_graph()
-    session = tf.Session()
-    self.main_network = Model(session, observation_size, num_actions,
+    self.session = tf.Session()
+    self.main_network = Model(self.session, observation_size, num_actions,
                               'Main_network', self._get_summary_dir())
-    self.target_network = Model(session, observation_size, num_actions,
+    self.target_network = Model(self.session, observation_size, num_actions,
                                 'Target_network')
     self.target_updater = TargetUpdater(
-        session,
+        self.session,
         self.main_network,
         self.target_network,
         update_rate=UPDATE_TARGET_NETWORK_RATE
         if properties.continuous_update else 1)
-    session.run(tf.global_variables_initializer())
+    self.session.run(tf.global_variables_initializer())
     # Update target to the same initialization that main model got.
     self.target_updater.update_target()
     self.counter = 0
@@ -270,6 +270,7 @@ class Agent:
   def cleanup(self):
     self.main_network.cleanup()
     self.target_network.cleanup()
+    self.session.close()
 
 
 def choose_action(observation, agent, num_actions, average_reward, episode):
