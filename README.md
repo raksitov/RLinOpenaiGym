@@ -5,7 +5,7 @@ project. Initial version runs all the supported algorithms one-by-one for the
 'CartPole-v0' environment in the OpenAI Gym and plots average reward in the
 tensorboard.
 
-## Summary.
+## Summary
 
 1.  Deep Q-learning algorithm [[1]](https://arxiv.org/abs/1312.5602)
 2.  Experience replay [[1]](https://arxiv.org/abs/1312.5602)
@@ -15,7 +15,7 @@ tensorboard.
     [[2]](https://arxiv.org/abs/1509.02971)
 6.  Double Q-learning [[3]](https://arxiv.org/abs/1509.06461)
 
-## Links.
+## Links
 
 1.  [Playing Atari with Deep Reinforcement
     Learning](https://arxiv.org/abs/1312.5602)
