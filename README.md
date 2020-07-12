@@ -1,11 +1,12 @@
-# rl-in-openai-gym
+# Deep Q-learning in Openai Gym
 
-The code for Stanford's AA228/CS238 ("Decision making under uncertainty") final
-project. Initial version runs all the supported algorithms one-by-one for the
-'CartPole-v0' environment in the OpenAI Gym and plots average reward in the
-tensorboard.
+The code and the report for Stanford's AA228/CS238 
+(["Decision making under uncertainty"](https://web.stanford.edu/class/aa228)) 
+final project. Initial version runs all the supported algorithms one-by-one 
+for the 'CartPole-v0' environment in the OpenAI Gym and plots average reward
+in the tensorboard.
 
-## Summary
+## Algorithms used
 
 1.  Deep Q-learning algorithm [[1]](https://arxiv.org/abs/1312.5602)
 2.  Experience replay [[1]](https://arxiv.org/abs/1312.5602)
